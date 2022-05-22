@@ -37,4 +37,12 @@
     绿色的modified表示放入暂存区的已修改文件
 
 ###git的原理
->首先未被git.add的文件状态是Untracked(未被跟踪) add之后状态改为Unmodified(未修改),一旦文件被修改之后,状态就会变成modified(已修改)
+>首先未被git.add的文件状态是Untracked(未被跟踪) add之后状态改为Unmodified(未修改),一旦文件被修改之后,状态就会变成红色的modified(已修改),再经过git.add之后状态就会变成绿色的modified,代表文件已被放入暂存区(Staged),最后git commit -m "注释"存入git仓库中
+
+
+###撤销对文件的修改
+>撤销对文件的修改，也就是把工作区中对应的文件还原成git仓库中所保存的版本,危险性较高，所有工作区中对文件的修改将丢失，且无法恢复
+
+#####撤销步骤
+    git checkout -- 文件名
+    
