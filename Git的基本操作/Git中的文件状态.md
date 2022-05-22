@@ -19,6 +19,10 @@
 
 #####跟踪新文件
     `git add 文件名`
+    git add有三个功能
+    1.可以用它跟踪新文件
+    2.可以把已跟踪的已修改的文件放到暂存区
+    3.把有冲突的文件标记为已解决状态
 
 #####查看指定文件状态
     git status [filename]
@@ -28,3 +32,9 @@
     git status -s
 #####提交更新(将文件提交到暂存区(staged))
     git commit -m "提交时要提醒的内容"
+#####当git库中的文件被修改后，status的状态会被改为modified(已修改)
+    红的modified是还未被放入暂存区的已修改文件
+    绿色的modified表示放入暂存区的已修改文件
+
+###git的原理
+>首先未被git.add的文件状态是Untracked(未被跟踪) add之后状态改为Unmodified(未修改),一旦文件被修改之后,状态就会变成modified(已修改)
