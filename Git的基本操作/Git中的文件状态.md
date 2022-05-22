@@ -45,4 +45,12 @@
 
 #####撤销步骤
     git checkout -- 文件名
-    
+
+#####一次性添加多个文件到暂存区
+    git add .
+#####从暂存区中移除对应的文件
+    git reset HEAD 文件名
+    移除多个:git reset HEAD .
+
+#####跳过使用暂存区域
+    git commit -a,GIT就会自动把已跟踪的文件添加到库中，跳过暂存区
