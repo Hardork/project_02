@@ -1,3 +1,7 @@
+###Git仓库初始化
+- 在项目的根目录中点击git bash here 然后在控制台中输入git init就可以创建初始化仓库,然后会出现.git隐藏目录  这个目录就是仓库
+    
+
 ###Git文件的4种状态
 
 - Untracked: 未跟踪, 此文件在文件夹中, 但并没有加入到git库, 不参与版本控制. 通过git add 状态变为Staged
@@ -13,12 +17,14 @@
 查看文件状态
 上面说文件有4种状态，通过如下命令可以查看到文件的状态：
 
-复制代码
-1 #查看指定文件状态
-2 git status [filename]
-3 
-4 #查看所有文件状态
-5 git status
-6 
-7 #精简的方式显示文件状态
-8 git status -s
+#####跟踪新文件
+    `git add 文件名`
+
+#####查看指定文件状态
+    git status [filename]
+#####查看所有文件状态
+    git status
+#####精简的方式显示文件状态
+    git status -s
+#####提交更新(将文件提交到暂存区(staged))
+    git commit -m "提交时要提醒的内容"
