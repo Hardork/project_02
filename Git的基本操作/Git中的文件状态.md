@@ -100,7 +100,51 @@
     *.log: 忽略所有 .log 文件
     
     config.php: 忽略当前路径的 config.php 文件
+#####例子
 
-        
+    index.css 忽略当前目录下的index.css文件
+
+    *.a 忽略所有.a文件
+
+    !lib.a 跟踪所有的lib.a文件，即便在前面被忽略了
+
+    /TUDO 只忽略当前目录下的TUDO文件,但不忽略subdir/TUDO
+
+    build/ 忽略任何目录下的的build文件
+
+    doc/*.txt  忽略doc/notes.txt 但不忽略doc/server/arch.txt
+
+    doc/**/*.pdf 忽略目录以及子目录下的.pdf文件
+
+
+###查看提交历史
+    1.按时间顺序查看提交历史
+    git log
+
+    2.只展示最新n次的提交历史
+    git log -n
+
+    3.可以通过回车查看更多之前的提交历史,按Q退出查看
+
+    4.在一行上查看提交历史
+    git log --pretty=oneline
+
+    5.在一行上展示最新的两条提交历史,并自定义输出格式
+    %h 提交的简写哈希值 %an作者名字 %ar修改日期(按多久以前输出) %s提交说明
+    git log -2 --pretty=format:"%h | %an |%ar | %s"
+
+###回退到指定版本
+
+    #commitID是提交历史中的黄色字符串
+
+    1.使用 git reset --hard <commitID>
+    git reset --hard 92e0ce5b0960eee79a7df5157bf67368b451ab77 返回到92e0ce5b0960eee79a7df5157bf67368b451ab77的版本
+
+    2.在旧版本中使用 git reflog --pretty=oneline命令，查看操作命令历史
+
+    3.再次根据最新的提交ID，跳转到最新的版本
+    git reset --hard <commitID>
+
+
 
         

@@ -1,0 +1,3 @@
+[submodule "project_02"]
+	path = project_02
+	url = git@github.com:Hardork/project_02.git
